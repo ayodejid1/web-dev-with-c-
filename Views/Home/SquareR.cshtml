@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "SqrtDeterminant";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Find Out Which Has The Highest Sqrt</h1>
+
+    <div>
+            @{
+                 @if(ViewBag.Result != null){
+                    <h5 class="display-8 text-danger"> <em>@ViewBag.Result</em> </h5>
+            }
+        }     
+
+    
+        <form asp-controller="Home" asp-action="SquareR" method="POST">
+        <input type="number" placeholder="First Number" name="firstNumber"/>
+        <input type="number" placeholder="Second Number" name="secondNumber"/>
+        <button type="submit">Submit</button>  
+
+        </form>
+    </div>
+</div>
